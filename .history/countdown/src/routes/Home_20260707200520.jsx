@@ -1,0 +1,17 @@
+import React from 'react'
+
+const Home = () => {
+  return (
+    <div className='Home'>
+      <h2>Monte a sua contagem regressiva!</h2>
+      <form className='countdown-form'>
+        <label>
+          <span>Título:</span>
+          <input type="text" name="title" placeholder='' id="" />
+        </label>
+      </form>
+    </div>
+  )
+}
+
+export default Home

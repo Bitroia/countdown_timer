@@ -1,0 +1,19 @@
+import "./App.css";
+import NewYear from "./assets/newyear.jpg";
+import useCountdown from "./hooks/useCountdown";
+import { Outlet } from "react-router-dom";
+
+function App() {
+  const [day, hour, minute, second] = useCountdown("Jan 1, 2027 00:00:00");
+  return (
+    <div className="app" style={{ backgroundImage: `url(${NewYear})` }}>
+      <div className="container">
+        
+        </div>
+        <Outlet/>
+      </div>
+    
+  );
+}
+
+export default App;
