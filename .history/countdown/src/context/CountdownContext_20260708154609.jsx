@@ -1,0 +1,17 @@
+import React from "react";
+import { Children } from "react";
+import { useState } from "react";
+
+const CountdownContext = React.createContext(null);
+
+const CountdownProvider = ({ children }) => {
+  const [evente, setEvent] = useState(null);
+
+  return (
+    <CountdownContext.Provider value={{ event, setEvent }}>
+      {children}
+    </CountdownContext.Provider>
+  );
+};
+
+export { CountdownContext, CountdownProvider };
